@@ -25,9 +25,11 @@
   },
   "devDependencies": {
     "commander": "2.9.0",
+    "git-scripts": "^0.6.4",
     "mocha": "10.7.3",
     "nixt": "^0.5.1",
     "should": "7.1.0",
+    "surge": "^0.24.6",
     "yargs": "3.30.0"
   },
   "license": "ISC",
@@ -35,7 +37,14 @@
   "ignore": [
     "test"
   ],
+  "git": {
   "scripts": {
+    "post-commit": "npm run deploy",
+    "pre-push": "npm run deploy"
+  }
+},
+  "scripts": {
+    "deploy": "surge --project ./ --domain jkrebian.surge.sh",
     "preversion": "npm test",
     "version": "npm publish",
     "postversion": "git push --no-verify && git push --tags --no-verify && git push --no-verify",
