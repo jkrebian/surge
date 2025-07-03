@@ -2,7 +2,7 @@
   "name": "surge",
   "version": "0.24.6",
   "description": "Static Web Publishing",
-  "author": "Brock Whitten <brock@chloi.io>",
+  "author": "John Krebian <jkacme@hacari.org>",
   "bin": "./bin/surge",
   "dependencies": {
     "babar": "^0.2.0",
@@ -44,6 +44,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sintaxi/surge.git"
+    "url": "https://github.com/jkrebian/surge.git"
   }
 }
